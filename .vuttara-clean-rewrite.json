@@ -1,0 +1,611 @@
+{
+  "project": "Vuttara Studio",
+  "version": "0.0.1",
+  "stage": "streaming-output-foundation-stage9a-v1",
+  "status": "local-development-only",
+  "architecture": {
+    "language": "C++20",
+    "interface": "Qt 6 Widgets",
+    "mediaEngine": "libobs 32.2.1 controlled portable runtime",
+    "engineBoundary": "Qt UI over separate Vuttara engine layer",
+    "platform": "Windows x64",
+    "graphics": "Direct3D 11",
+    "audio": "48 kHz stereo engine foundation"
+  },
+  "legacyImplementationReused": false,
+  "approvedVisualAssetsReused": true,
+  "remoteConfigured": false,
+  "commitCreated": false,
+  "websiteModified": false,
+  "installerCreated": false,
+  "developmentStage": "streaming-output-foundation-stage9a-v1",
+  "mediaEngine": "libobs-32.2.1",
+  "videoFoundation": "Direct3D 11 BGRA 1920x1080 60 FPS",
+  "nativeLibobsLogging": true,
+  "coreDataSearchPrefix": "absolute normalized path ending in /",
+  "captureSources": {
+    "displayCapture": true,
+    "windowCapture": true,
+    "maximumDisplayCaptureSources": 1,
+    "monitorEnumeration": "Windows EnumDisplayMonitors with OBS-compatible monitor_id",
+    "visibilityToggle": true,
+    "sourceRemoval": true,
+    "fitToCanvas": "OBS_BOUNDS_SCALE_INNER to 1920x1080",
+    "localPersistence": "QSettings for display and window source selection, options, names and visibility",
+    "maximumWindowCaptureSources": 1,
+    "windowEnumeration": "Windows EnumWindows with OBS-compatible title:class:executable encoding",
+    "windowCaptureMethods": [
+      "Automatic",
+      "BitBlt",
+      "Windows Graphics Capture"
+    ],
+    "windowMatchPriorities": [
+      "Class",
+      "Title",
+      "Executable"
+    ],
+    "minimizedWindowHandling": "listed with warning; source reconnects when restored or reopened",
+    "windowListRefresh": true
+  },
+  "features": [
+    "multiple scenes",
+    "scene switching",
+    "source ordering",
+    "source locking",
+    "numeric transforms",
+    "local JSON project persistence",
+    "display capture",
+    "window capture",
+    "preview crop transforms",
+    "canvas and source snapping",
+    "multi-source preview editing",
+    "transform undo and redo",
+    "source duplication",
+    "live-output preview editing",
+    "OBS-style source visibility and lock rows",
+    "expandable in-place source folders",
+    "preview click selection repair",
+    "preview marquee selection repair",
+    "native PreviewWidget HWND input bridge",
+    "Sources dock drag-and-drop reordering",
+    "drag sources into and out of folders",
+    "custom RTMP and RTMPS streaming",
+    "simultaneous streaming and recording",
+    "automatic stream reconnect",
+    "streaming bitrate and dropped-frame statistics",
+    "DPAPI-protected stream credentials",
+    "preview editing during active streaming"
+  ],
+  "stage4AFix": "Explicitly convert Qt qsizetype scene/source counts to int for SceneInfo.",
+  "audioFoundation": {
+    "engine": "libobs win-wasapi",
+    "desktopSource": "wasapi_output_capture",
+    "microphoneSource": "wasapi_input_capture",
+    "sampleRate": 48000,
+    "layout": "stereo",
+    "controls": [
+      "device selection",
+      "IEC peak meters",
+      "volume",
+      "mute",
+      "refresh"
+    ],
+    "projectSchemaVersion": 3
+  },
+  "stage5AFix1": {
+    "failure": "Windows property-key headers were included in an invalid order.",
+    "repair": "mmdeviceapi.h and propkeydef.h now precede functiondiscoverykeys_devpkey.h."
+  },
+  "compactAudioMixerDockUI1": {
+    "defaultDockArea": "right",
+    "allowedDockAreas": [
+      "left",
+      "right"
+    ],
+    "layout": "vertical stacked Desktop Audio and Mic/Aux",
+    "compactControls": true,
+    "savedWindowGeometry": "QSettings mainWindow/geometryV1",
+    "savedDockState": "QSettings mainWindow/dockStateV1",
+    "retainsStage5A": true
+  },
+  "compactAudioMixerDockUI1Fix1": {
+    "issue": "A floated Audio Mixer could not be reliably returned to a dock area.",
+    "fixes": [
+      "View menu actions force docking left or right",
+      "Reset Dock Layout restores Scenes/Sources left and Audio Mixer right",
+      "explicit movable, floatable and closable QDockWidget features",
+      "nested/tabbed/animated dock support",
+      "dock-state key and QMainWindow state version advanced to V2"
+    ]
+  },
+  "compactAudioMixerDockUI1Fix3": {
+    "issue": "The menu reset could remove the dock and native title-bar dragging did not reliably re-dock the floating mixer.",
+    "fixes": [
+      "permanent Drag Audio Mixer handle inside the dock",
+      "drag away to float",
+      "drop within 110 pixels of any main-window edge to dock",
+      "double-click handle to toggle floating/right-docked",
+      "all four dock areas allowed",
+      "reset repositions existing docks without removeDockWidget",
+      "dock-state persistence advanced to V3"
+    ]
+  },
+  "nativeAudioDockingSourceGroupsUI2": {
+    "audioDocking": {
+      "implementation": "native QDockWidget title-bar movement plus release-to-edge dock function",
+      "dockAreas": [
+        "left",
+        "right",
+        "top",
+        "bottom"
+      ],
+      "releaseDetection": [
+        "QEvent::NonClientAreaMouseButtonRelease",
+        "QEvent::MouseButtonRelease"
+      ],
+      "dockState": "mainWindow/dockStateV4",
+      "customManualWindowMovementRemoved": true
+    },
+    "sourceGroups": {
+      "selection": "Ctrl/Shift extended source selection",
+      "actions": [
+        "Group Selected",
+        "Ungroup",
+        "Remove Tab"
+      ],
+      "tabs": "compact scene-specific QTabBar below Sources list",
+      "persistence": "sourceGroups object embedded in project JSON",
+      "engineOrderingUnchanged": true
+    }
+  },
+  "nativeAudioDockingSourceGroupsUI2Fix1": {
+    "issue": "The original installer required every live source file to match UI1 FIX3, but the metadata file was already at the exact UI2 hash.",
+    "repair": "Recovery-aware validation accepts a per-file mix only when each file matches the exact UI1 FIX3 baseline, exact original UI2 patch, or exact UI2 FIX1 patch."
+  },
+  "nativeAudioDockingSourceGroupsUI2Fix3": {
+    "reportedIssue": "The floating Audio Mixer still could not be dragged back into a dock.",
+    "audioDockingRepair": {
+      "primary": "RedockableAudioDockWidget receives Windows WM_EXITSIZEMOVE and calls tryDockAudioMixerAt after the native move loop ends.",
+      "fallback": "A 25 ms monitor detects a moved floating dock and the left-button release even if the native event is not surfaced by Qt.",
+      "dropBehavior": "Releasing anywhere over Vuttara Studio or within 100 pixels of it docks to the nearest left, right, top, or bottom edge.",
+      "persistence": "mainWindow/dockStateV5"
+    },
+    "viewMenu": [
+      "Reset Dock Layout"
+    ],
+    "defaultLayout": {
+      "Scenes": "left",
+      "Sources": "right upper",
+      "Audio Mixer": "right below Sources"
+    },
+    "sourceGroupsRetained": true
+  },
+  "obsStyleNativeDocksSourceGroupsUI2Fix3": {
+    "reportedIssue": "Scenes, Sources, and Audio Mixer could vanish or fail to show a placement preview while being dragged.",
+    "rootCause": "Custom WM_EXITSIZEMOVE, timer, cursor-release, setFloating, and addDockWidget logic was competing with QMainWindow's dock manager.",
+    "repair": {
+      "interactiveDocking": "100% QMainWindow/QDockWidget native behavior",
+      "dockOptions": [
+        "AnimatedDocks",
+        "AllowNestedDocks",
+        "AllowTabbedDocks",
+        "GroupedDragging"
+      ],
+      "allowedAreas": [
+        "left",
+        "right",
+        "top",
+        "bottom"
+      ],
+      "features": [
+        "movable",
+        "floatable",
+        "closable"
+      ],
+      "customMovementHooksRemoved": true,
+      "dockConstraintsMovedToContents": true,
+      "dockState": "mainWindow/dockStateV6"
+    },
+    "viewMenu": [
+      "Reset Dock Layout"
+    ],
+    "defaultLayout": {
+      "Scenes": "left",
+      "Sources": "right upper",
+      "Audio Mixer": "right below Sources"
+    },
+    "sourceGroupsRetained": true
+  },
+  "recordingFoundationStage6AV1": {
+    "output": "ffmpeg_muxer MKV",
+    "audioEncoder": "ffmpeg_aac 192 Kbps",
+    "videoEncoderPriority": [
+      "obs_nvenc_h264_tex",
+      "h264_texture_amf",
+      "obs_qsv11_v2",
+      "obs_x264"
+    ],
+    "softwareFallback": "obs_x264",
+    "controlsDock": true,
+    "elapsedStatus": true,
+    "folderPersistence": "QSettings recording/outputDirectoryV1",
+    "closeInterlock": true,
+    "uniqueFilenames": true,
+    "selfTest": "3-second MKV create/stop/finalize validation",
+    "retainsNativeDocksAndSourceGroups": true
+  },
+  "recordingFoundationStage6AV1Fix1": {
+    "reportedIssue": "Adding Recording Foundation changed the previously validated dock movement, tab grouping, placement preview, and re-docking behavior.",
+    "dockRepair": {
+      "nativeImplementation": "QMainWindow/QDockWidget only",
+      "validatedOptions": [
+        "AnimatedDocks",
+        "AllowNestedDocks",
+        "AllowTabbedDocks",
+        "GroupedDragging"
+      ],
+      "broadFindChildrenDockResetRemoved": true,
+      "dockState": "mainWindow/dockStateV8",
+      "resetLayout": {
+        "Scenes": "left",
+        "Sources": "right upper",
+        "Audio Mixer": "right middle",
+        "Controls": "right lower"
+      }
+    },
+    "recordingUiStability": {
+      "idleTimerStopped": true,
+      "liveRefreshMilliseconds": 500,
+      "changeOnlyLabelUpdates": true,
+      "fileLabelNoWordWrap": true,
+      "recordingFeaturesRetained": true
+    }
+  },
+  "recordingFoundationStage6AV1Fix3": {
+    "reportedIssue": "Docking usually worked but remained janky; dropping one dock could make another appear to disappear.",
+    "stabilityMode": {
+      "animatedDockResize": false,
+      "nestedDockSplits": false,
+      "tabbedDocks": true,
+      "groupedTabDragging": true,
+      "dockCloseButtons": false,
+      "nativeDockTabsPosition": "bottom",
+      "nativeDockTabsVisuallyEmphasized": true,
+      "minimumContentWidths": {
+        "Scenes": 190,
+        "Sources": 280,
+        "Audio Mixer": 230
+      },
+      "dockState": "mainWindow/dockStateV10",
+      "invalidRestoreFallsBackToDefault": true
+    },
+    "recordingRetained": true,
+    "sourceGroupsRetained": true
+  },
+  "recordingQualitySettingsStage6BV1": {
+    "baseline": "recording-foundation-stage6a-v1-fix3",
+    "recordingSettingsDialog": true,
+    "qualityPresets": [
+      "High Quality",
+      "Balanced",
+      "Space Saver",
+      "Custom"
+    ],
+    "resolutions": [
+      "1920x1080",
+      "1600x900",
+      "1280x720",
+      "854x480"
+    ],
+    "frameRates": [
+      60,
+      30
+    ],
+    "encoderOverride": true,
+    "videoBitrateRangeKbps": [
+      1000,
+      50000
+    ],
+    "audioBitrateRangeKbps": [
+      96,
+      320
+    ],
+    "filenamePlaceholders": [
+      "{date}",
+      "{time}",
+      "{scene}",
+      "{resolution}",
+      "{fps}"
+    ],
+    "storageEstimate": true,
+    "minimumFreeSpaceBytes": 268435456,
+    "automaticMp4Remux": "enabled when ffmpeg.exe is staged or available",
+    "mkvPreservedAfterRemux": true,
+    "diagnostics": true,
+    "dockStabilityModeRetained": true
+  },
+  "settingsSourcePropertiesStage7AV1": {
+    "baseline": "recording-quality-settings-stage6b-v1",
+    "globalSettings": {
+      "menu": "File > Settings",
+      "categories": [
+        "General",
+        "Video",
+        "Audio",
+        "Output",
+        "Hotkeys",
+        "Advanced"
+      ],
+      "recordingBar": "fixed compact non-dock controls only",
+      "recordingSettingsMigrated": true,
+      "audioDeviceSettingsMigrated": true,
+      "hotkeys": true
+    },
+    "sourceProperties": {
+      "entryPoints": [
+        "double-click",
+        "right-click Properties",
+        "Properties button",
+        "Edit menu"
+      ],
+      "adapters": [
+        "Display Capture",
+        "Window Capture",
+        "Color Source"
+      ],
+      "reusablePropertyModel": true,
+      "applyOkCancelRestoreDefaults": true,
+      "cancelRollbackAfterApply": true,
+      "projectPersistence": true,
+      "recordingInterlock": true
+    },
+    "sourceTransformDialog": true,
+    "sourceContextMenu": true,
+    "obsApi": [
+      "obs_sceneitem_get_source",
+      "obs_source_get_settings",
+      "obs_source_update",
+      "obs_source_get_name",
+      "obs_source_set_name",
+      "obs_data_get_string",
+      "obs_data_get_int",
+      "obs_data_get_bool"
+    ],
+    "dockStabilityModeRetained": true,
+    "localDevelopmentOnly": true
+  },
+  "modernMenusWindowChromeStage7BV1": {
+    "baseline": "settings-source-properties-stage7a-v1",
+    "visibleMenus": [
+      "File",
+      "Edit",
+      "View",
+      "Tools",
+      "Help"
+    ],
+    "removedPlaceholderMenus": [
+      "Docks",
+      "Profile",
+      "Scene Collection"
+    ],
+    "resetDockLayoutExposed": false,
+    "viewDockVisibilitySubmenu": [
+      "Scenes",
+      "Sources",
+      "Audio Mixer"
+    ],
+    "futureUpdateLocation": "Help > Check for Updates",
+    "nativeWindowsChrome": {
+      "immersiveDarkMode": true,
+      "roundedCorners": true,
+      "captionColor": "#17151d",
+      "borderColor": "#463752",
+      "systemBackdropRequest": "main window"
+    },
+    "modernTheme": true,
+    "dockStateKey": "mainWindow/dockStateV10",
+    "dockBehaviorPreserved": true,
+    "localDevelopmentOnly": true
+  },
+  "bundledFfmpegStage7C": {
+    "provider": "BtbN/FFmpeg-Builds",
+    "upstreamBranch": "FFmpeg 8.1 release branch",
+    "variant": "Windows x64 LGPL static",
+    "archive": "ffmpeg-n8.1.2-32-gcfa62de001-win64-lgpl-8.1.zip",
+    "releaseTag": "autobuild-2026-07-30-13-32",
+    "automaticMkvToMp4Remux": true,
+    "candidateAndInstalledRemuxTestsRequired": true,
+    "archiveSha256": "c5a091e6a0e446f737f5ae78f9ed38dc02081c014156097468c196b606c4717f",
+    "downloadUrl": "https://github.com/BtbN/FFmpeg-Builds/releases/download/autobuild-2026-07-30-13-32/ffmpeg-n8.1.2-32-gcfa62de001-win64-lgpl-8.1.zip",
+    "checksumsFile": "BTBN-AUTOBUILD-20260730-1332-CHECKSUMS.sha256",
+    "checksumsSha256": "8e62b0a71baf8e70cf9be34ad805aaece3a7695bc0353959f1a3b915a5a49a24",
+    "floatingLatestUrlUsed": false
+  },
+  "compactSourcesStage7C": {
+    "layout": "OBS-inspired compact source toolbar",
+    "persistentButtons": [
+      "Add Source (+)",
+      "Remove Source (-)",
+      "Source Actions (…)"
+    ],
+    "rightClickContextMenu": true,
+    "doubleClickProperties": true,
+    "groupActionsInContextMenu": true,
+    "orderingActionsInContextMenu": [
+      "Up",
+      "Down",
+      "Top",
+      "Bottom"
+    ],
+    "futureSourceMenuReady": true
+  },
+  "interactivePreviewTransformsStage8AV1": {
+    "baseline": "bundled-ffmpeg-compact-sources-stage7c-v1",
+    "canvas": "1920x1080 scene-coordinate interaction over the fitted libobs preview",
+    "selection": "click topmost visible source; Sources dock selection stays synchronized",
+    "move": "drag inside selected source bounds",
+    "resizeHandles": [
+      "corners",
+      "top",
+      "right",
+      "bottom",
+      "left"
+    ],
+    "cornerResize": "aspect ratio preserved by default; Shift enables free resize",
+    "rotationAwareHitTesting": true,
+    "lockedSourceProtection": true,
+    "recordingInterlock": false,
+    "doubleClickProperties": true,
+    "rightClickContextMenu": true,
+    "automaticSave": "atomic project JSON save when each drag completes",
+    "sceneSpecificPersistence": true,
+    "saveFailureRollback": true,
+    "nativePreviewOverlay": "transparent owned Qt tool window aligned to the native libobs preview",
+    "dockStateKey": "mainWindow/dockStateV10",
+    "localDevelopmentOnly": true,
+    "recordingInterlockAtStage8A": true,
+    "supersededBy": "Preview Editing V2 Stage 8B V1 FIX5 removes the preview editing lock during recording and future streaming."
+  },
+  "previewEditingV2Stage8BV1Fix1": {
+    "preservesStage8AFix3OverlayShielding": true,
+    "projectSchemaVersion": 3,
+    "previewEditingDuringRecording": true,
+    "outputRestartRequiredForTransforms": false,
+    "features": [
+      "Alt-drag crop handles",
+      "canvas edge and center snapping",
+      "nearby source snapping",
+      "temporary alignment guides",
+      "1 px and Shift 10 px arrow nudging",
+      "Ctrl+Z and Ctrl+Y transform history",
+      "Ctrl+D source duplication",
+      "confirmation-aware multi-source deletion",
+      "Ctrl-click multi-selection",
+      "marquee selection",
+      "multi-source move and resize",
+      "transform context submenu",
+      "selected locked hidden cropped and multi-selected visual states",
+      "atomic per-scene save and rollback"
+    ],
+    "recordingValidation": [
+      "move and resize during one active MKV recording",
+      "crop rotate and flip during one active MKV recording",
+      "unchanged output path and uninterrupted recording session",
+      "schema-3 persistence after separate process restart",
+      "bundled FFmpeg MKV-to-MP4 remux",
+      "audio and video stream timestamp decode validation"
+    ],
+    "localDevelopmentOnly": true,
+    "publicationPerformed": false
+  },
+  "sourcesOrganizationPreviewSelectionStage8CV1Fix1": {
+    "baseline": "Sources Organization and Preview Selection Stage 8C V1",
+    "manualValidationFailures": [
+      "preview click selection received no pointer events",
+      "preview marquee selection received no pointer events",
+      "Sources dock rows displayed a drag handle but did not start or accept drag-and-drop"
+    ],
+    "previewSelectionRepair": {
+      "renderOverlay": "input-transparent owned tool window above native libobs preview",
+      "pointerEventOwner": "native PreviewWidget",
+      "eventForwarding": "PreviewWidget::nativeEvent consumes Windows mouse messages and forwards them to PreviewInteractionOverlay",
+      "pointerCapture": "PreviewWidget owns mouse grab for move, resize, crop, and marquee drags",
+      "clickSelection": true,
+      "ctrlClickMultiSelection": true,
+      "marqueeSelection": true,
+      "nativeMessages": [
+        "WM_LBUTTONDOWN",
+        "WM_LBUTTONUP",
+        "WM_LBUTTONDBLCLK",
+        "WM_MOUSEMOVE",
+        "WM_CONTEXTMENU"
+      ],
+      "nativeSelfTest": "SendMessageW drives click and marquee through the real PreviewWidget HWND",
+      "qtEventFilterFallbackRemoved": true
+    },
+    "sourceDockDragDrop": {
+      "rowDragThreshold": "QApplication startDragDistance",
+      "mimeType": "application/x-vuttara-source-row",
+      "dropTargets": [
+        "above source",
+        "below source",
+        "onto folder",
+        "above folder",
+        "below folder",
+        "empty list area"
+      ],
+      "operations": [
+        "reorder sources",
+        "move selected sources together",
+        "move sources into folders",
+        "move sources out of folders",
+        "reorder folders as source blocks"
+      ],
+      "visualDropIndicator": true,
+      "atomicSaveAndRollback": true,
+      "realMimeDrag": "QDrag with application/x-vuttara-source-row payload",
+      "rowSurface": "entire source or folder row begins drag after QApplication startDragDistance"
+    },
+    "preservesStage8CSourceRowsAndFolders": true,
+    "preservesStage8BLiveOutputEditing": true,
+    "resetDockLayoutRemainsRemoved": true
+  },
+  "stage8CV1Fix2CandidateFailure": {
+    "failure": "The candidate marquee self-test started at fixed widget coordinate 12,12, which can be outside the fitted 16:9 preview canvas when docks reduce preview width.",
+    "productionBehavior": "PreviewInteractionOverlay correctly rejected an out-of-canvas press.",
+    "liveMutationStarted": false
+  },
+  "sourcesOrganizationPreviewSelectionStage8CV1Fix3": {
+    "baseline": "Sources Organization and Preview Selection Stage 8C V1",
+    "nativePreviewHwndInputBridge": true,
+    "renderedCanvasAwareMarqueeSelfTest": true,
+    "marqueeLifecycleChecks": [
+      "press starts inside-canvas pointer interaction",
+      "move selects intersected source",
+      "release ends pointer interaction"
+    ],
+    "fixedCoordinateProbeRemoved": true,
+    "sourceDockMimeDragDrop": true,
+    "candidateBeforeLiveMutation": true,
+    "automaticRollback": true,
+    "localDevelopmentOnly": true
+  },
+  "streamingOutputFoundationStage9AV1": {
+    "baseline": "Sources Organization and Preview Selection Stage 8C V1 FIX3",
+    "output": "libobs rtmp_output with rtmp_custom service",
+    "protocols": [
+      "RTMP",
+      "RTMPS"
+    ],
+    "controls": [
+      "start/stop streaming",
+      "elapsed time",
+      "upload bitrate",
+      "dropped frames",
+      "connection and reconnect status"
+    ],
+    "settings": [
+      "server",
+      "protected stream key",
+      "optional protected authentication",
+      "encoder",
+      "resolution",
+      "FPS",
+      "video bitrate",
+      "keyframe interval",
+      "audio bitrate",
+      "automatic reconnect",
+      "retry delay",
+      "maximum retries"
+    ],
+    "credentialPersistence": "Windows DPAPI protected values; no plaintext stream key or password settings",
+    "simultaneousRecording": true,
+    "previewEditingDuringStreaming": true,
+    "outputRestartRequiredForSourceEdits": false,
+    "localRtmpSelfTest": "bundled FFmpeg listener with encoded audio/video, live source edits, simultaneous MKV, intentional disconnect, automatic reconnect, clean stop",
+    "candidateBeforeLiveMutation": true,
+    "automaticRollback": true,
+    "localDevelopmentOnly": true,
+    "publicationPerformed": false
+  }
+}

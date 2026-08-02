@@ -1,0 +1,11 @@
+QT DYNAMIC-LINKING AND MODIFICATION NOTICE
+
+The official Vuttara Studio 0.0.1 Windows package installs Qt libraries and Qt
+plugins as separate DLL files beside the application. Vuttara Studio does not
+use a mechanism intended to prevent replacement of those libraries. A user may
+inspect, replace, or debug compatible Qt library builds, subject to the
+applicable Qt licences and technical compatibility requirements.
+
+Qt source code and module-specific licence information are available through
+the Qt Project. See THIRD-PARTY-NOTICES.txt and the LGPLv3/GPLv3 texts in the
+licenses directory.

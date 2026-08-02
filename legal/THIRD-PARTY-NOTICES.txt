@@ -1,0 +1,64 @@
+VUTTARA STUDIO 0.0.1 — THIRD-PARTY NOTICES
+Prepared: August 1, 2026
+
+This file identifies principal third-party components in the validated Windows
+runtime. It is not a substitute for the complete licence texts in the
+legal\licenses directory or notices supplied by an upstream project.
+
+1. OBS Studio / libobs 32.2.1
+Project: https://github.com/obsproject/obs-studio
+Licence: GNU GPL version 2 or any later version.
+Vuttara Studio uses libobs and OBS plugins for capture, audio, encoding,
+recording, and streaming. OBS Studio copyright belongs to its contributors.
+
+2. Qt 6.11.1
+Project and source: https://www.qt.io/ and https://code.qt.io/
+Licence options used by open-source distributions include GNU LGPL version 3
+and GNU GPL version 3, with module-specific terms and third-party attributions.
+The Vuttara Studio Windows runtime dynamically links Qt libraries, including
+Qt Core, GUI, Widgets, Network, SVG, platform, image-format, style, network
+information, and Schannel TLS plugins. The DLLs are installed as separate,
+replaceable files. Qt contains third-party code under additional compatible
+licences; consult Qt's source-tree LICENSES directory and official attribution
+pages for the exact Qt 6.11.1 notices.
+
+3. FFmpeg components distributed through the OBS runtime
+Project: https://ffmpeg.org/
+FFmpeg is generally LGPL version 2.1 or later, but optional GPL components make
+the applicable FFmpeg build GPL version 2 or later. The validated runtime
+contains OBS FFmpeg and x264 integration, so the binary distribution is handled
+as GPL-covered. FFmpeg may also contain MIT, BSD, and other permissively
+licensed portions identified by its source tree.
+
+4. x264
+Project source mirror: https://github.com/mirror/x264
+Licence: GNU GPL version 2 or any later version, unless a separate commercial
+licence applies. The validated runtime includes obs-x264 support.
+
+5. Inno Setup 7.0.2
+Project: https://jrsoftware.org/isinfo.php
+Licence: Inno Setup License. The installer executable contains Inno Setup code.
+The complete Inno Setup licence is included as INNO-SETUP-LICENSE.txt.
+
+6. Microsoft Visual C++ Redistributable and Microsoft runtime components
+Microsoft redistributable or runtime files may be included to support the
+Windows application. They are provided under Microsoft's applicable licence
+terms and are not relicensed under the GNU GPL. Windows Schannel, DPAPI,
+Direct3D, and other operating-system components are supplied by Microsoft as
+part of Windows and are not included as Vuttara Studio source code.
+
+7. Hardware and service integrations
+OBS plugins may use installed NVIDIA, AMD, Intel, Windows, or other hardware
+interfaces when available. Streaming presets connect to services selected by
+the user. Product and company names are trademarks of their respective owners.
+No endorsement is implied.
+
+8. Source and licence availability
+Standard licence texts included with this distribution:
+- GNU GPL version 2
+- GNU GPL version 3
+- GNU LGPL version 2.1
+- GNU LGPL version 3
+- Inno Setup License
+
+See SOURCE-OFFER.txt for corresponding-source access and the written offer.

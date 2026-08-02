@@ -1,0 +1,16 @@
+INSTALLATION NOTICE
+
+This installer is for Vuttara Studio 0.0.1. It uses a distinct application
+identifier and is published as a separate GitHub release without deleting,
+replacing, retagging, or rewriting the legacy Vuttara Studio 0.2.9 release.
+The default installation folder is named simply "Vuttara Studio."
+
+Interactive installation requires:
+1. acceptance of the Terms of Service; and
+2. acknowledgement that the Privacy Policy was reviewed.
+
+The application is open-source software. The Terms do not reduce rights granted
+by the GNU GPL or other applicable open-source licences.
+
+Before installing or updating, stop active recordings and streams and preserve
+backups of important files.

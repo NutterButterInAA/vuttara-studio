@@ -1,0 +1,132 @@
+VUTTARA STUDIO PRIVACY POLICY
+Effective date: August 1, 2026
+
+This Privacy Policy explains how the official Vuttara Studio application and
+related update and website services handle information. Vuttara Studio is
+operated by Ward Reynolds in Calgary, Alberta, Canada.
+
+1. SUMMARY
+Vuttara Studio 0.0.1 is primarily a local desktop application. It does not
+include a Vuttara account, advertising, behavioural tracking, usage analytics,
+automatic crash-report submission, cloud project storage, or cloud sync. The
+application does not send recordings, projects, scenes, sources, logs, or
+streaming credentials to Vuttara Studio.
+
+Network activity occurs when you choose to stream to a third-party service,
+when the application checks the official update feed, when you approve an
+installer download from GitHub, or when you open an external website.
+
+2. INFORMATION STORED ON YOUR COMPUTER
+Depending on features you use, Vuttara Studio may store locally:
+- application settings and window or dock layout;
+- scenes, source configuration, transforms, visibility, and project state;
+- recording and streaming settings;
+- stream keys and service passwords encrypted for the current Windows user
+  with Windows Data Protection API (DPAPI);
+- local diagnostic and startup logs;
+- downloaded update installers and temporary .part files;
+- recordings in the directory you select; and
+- other files you intentionally import, export, or create.
+
+Local data remains under your control. Anyone with access to your Windows
+account, backups, storage, or exported files may be able to access some of it.
+DPAPI protection is not a substitute for a secure Windows account and device.
+
+3. CAPTURE, RECORDING, AND STREAMING
+Screen, window, camera, microphone, desktop-audio, and other source data is
+processed on your computer. A recording is written to the local destination
+you select. When you start streaming, encoded audio, video, and authentication
+information are sent directly from your computer to the streaming server or
+service you configured. Vuttara Studio does not operate an intermediary stream
+relay in version 0.0.1.
+
+The selected streaming provider may collect account, device, network, content,
+and usage information under its own privacy policy. Review that provider's
+policy before streaming.
+
+4. UPDATE CHECKS AND DOWNLOADS
+Stable builds may request:
+https://vuttarastudio.nuttabuttainaa.com/updates/clean-rewrite/latest.json
+
+The request includes ordinary network information such as your IP address and
+a user-agent identifying the Vuttara Studio version and Windows x64 platform.
+Website infrastructure may create routine security and access logs. When you
+approve an update download, the application downloads the installer from the
+official NutterButterInAA/vuttara-studio GitHub release path. GitHub receives
+ordinary request and network information under GitHub's privacy policy.
+
+The application verifies the published installer filename, file size, and
+SHA-256 value before offering to run it. Vuttara Studio does not use update
+requests for advertising or behavioural profiling.
+
+5. WEBSITE AND HOSTING
+The Vuttara Studio website may be delivered through hosting, content-delivery,
+DNS, and security providers such as Cloudflare. Those providers may process IP
+addresses, request headers, timestamps, security signals, and related log data
+needed to deliver and protect the site. This policy does not replace their own
+privacy notices.
+
+6. INFORMATION VUTTARA STUDIO DOES NOT INTENTIONALLY COLLECT IN 0.0.1
+The desktop application does not intentionally transmit to Vuttara Studio:
+- recordings or live stream content;
+- project or scene contents;
+- camera, microphone, screen, or window captures;
+- stream keys or streaming passwords;
+- local application logs;
+- contact lists or unrelated files;
+- advertising identifiers; or
+- analytics or telemetry events.
+
+7. PURPOSES AND LEGAL BASES
+Information processed through official web and update infrastructure is used
+to deliver requested content, provide updates, protect systems, diagnose
+availability and security problems, prevent abuse, and comply with law. Where
+applicable, processing is based on providing requested services, legitimate
+security and operational interests, consent, or legal obligations.
+
+8. RETENTION
+Vuttara Studio does not centrally retain the local application data described
+above. You control it through Windows and application settings. Website and
+infrastructure logs may be retained by the relevant provider for security,
+operations, troubleshooting, and legal compliance according to that provider's
+practices. Update installers remain locally until you remove them or the
+application replaces or cleans them.
+
+9. SECURITY
+The application uses HTTPS for update requests, restricts installer downloads
+to the official GitHub release path, checks file size and SHA-256, and uses
+Windows DPAPI for locally saved stream secrets. No system is perfectly secure.
+Keep Windows updated, protect your account, use unique streaming credentials,
+and verify official downloads.
+
+10. INTERNATIONAL PROCESSING
+GitHub, Cloudflare, streaming services, and other providers may process data in
+Canada, the United States, or other countries. Their laws may differ from those
+where you live.
+
+11. CHILDREN AND TEENS
+Vuttara Studio is recommended for ages 13 and older. A person below the age of
+majority should use it with parent or guardian involvement. The desktop
+application is not designed to collect personal information from children. Do
+not stream or publish a minor's personal information without appropriate legal
+permission and safeguards.
+
+12. YOUR CHOICES AND RIGHTS
+You may use local recording features without configuring a streaming account.
+You may decline an update download or installation. You may delete local
+settings, logs, projects, recordings, and downloaded installers using the
+application, Windows, or file management tools. Depending on where you live,
+you may have rights to request access, correction, or deletion of personal
+information held by an operator or service provider.
+
+13. CHANGES
+This policy may change when features, services, providers, or legal obligations
+change. The effective date will be updated. A future account, cloud, analytics,
+or crash-reporting feature would require an updated disclosure before release.
+
+14. CONTACT
+Operator: Ward Reynolds
+Location: Calgary, Alberta, Canada
+Website: https://vuttarastudio.nuttabuttainaa.com/
+Privacy questions: privacy@nuttabuttainaa.com
+Project issues: https://github.com/NutterButterInAA/vuttara-studio/issues

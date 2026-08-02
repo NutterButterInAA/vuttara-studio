@@ -1,0 +1,8 @@
+<RCC>
+  <qresource prefix="/">
+    <file alias="branding/vuttara-studio-mark.png">branding/vuttara-studio-mark.png</file>
+    <file alias="branding/vuttara-studio-wordmark.png">branding/vuttara-studio-wordmark.png</file>
+    <file alias="icons/vuttara-studio-256.png">icons/vuttara-studio-256.png</file>
+    <file alias="styles/theme.qss">styles/theme.qss</file>
+  </qresource>
+</RCC>

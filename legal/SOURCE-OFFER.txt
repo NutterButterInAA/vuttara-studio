@@ -1,0 +1,42 @@
+VUTTARA STUDIO 0.0.1 — CORRESPONDING SOURCE OFFER
+Date of offer: August 1, 2026
+
+Vuttara Studio source code is licensed under GNU GPL version 2 or, at your
+option, any later version. The official Windows binary distribution also
+contains GPL, LGPL, and other components described in THIRD-PARTY-NOTICES.txt.
+
+Equivalent online access
+The preferred source for Vuttara Studio is published at:
+https://github.com/NutterButterInAA/vuttara-studio
+
+The v0.0.1 release is intended to provide a source archive alongside the
+installer. GitHub also provides source archives for the release tag.
+
+Written offer
+For any GPL-covered object code distributed with Vuttara Studio 0.0.1, Ward
+Reynolds offers to provide any third party with the complete corresponding
+machine-readable source code available to the distributor, including the
+source for Vuttara Studio, applicable modifications, interface files, and the
+scripts used to control compilation and installation. The offer also covers
+corresponding source and build information for GPL-covered bundled components
+to the extent required by their licences.
+
+This written offer is valid for at least three years after the last
+distribution of Vuttara Studio 0.0.1 by Ward Reynolds. The charge, if physical
+media is requested, will not exceed the reasonable cost of physically
+performing source distribution. Electronic delivery is normally provided
+without charge.
+
+Request method
+Open a source request at:
+https://github.com/NutterButterInAA/vuttara-studio/issues
+
+You may also contact:
+privacy@nuttabuttainaa.com
+
+Include "Vuttara Studio 0.0.1 Corresponding Source Request" and identify the
+installer filename and SHA-256 value you received.
+
+Third-party upstream source references are listed in THIRD-PARTY-NOTICES.txt.
+This offer does not replace or narrow any right granted directly by an
+applicable open-source licence.

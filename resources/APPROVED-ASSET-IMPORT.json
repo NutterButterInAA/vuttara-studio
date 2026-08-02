@@ -1,0 +1,26 @@
+{
+  "version": "0.0.1",
+  "source_package": "Vuttara-Studio-0.0.1-Clean-Branding-Assets.zip",
+  "assets": [
+    {
+      "path": "resources/branding/vuttara-studio-mark.png",
+      "sha256": "26f3eed781b416c5868d6d57400c8621ca3672f4d0c131687becad143b77d349",
+      "bytes": 327528
+    },
+    {
+      "path": "resources/branding/vuttara-studio-wordmark.png",
+      "sha256": "c504f9de3757b92dc6a105a14321f7a67770b9dcb47a1df97d3718c55d5f15df",
+      "bytes": 119213
+    },
+    {
+      "path": "resources/icons/vuttara-studio-256.png",
+      "sha256": "2a60d30df7f50138e495cf73ad8012f4bb77a5d2a798b790189c6f0925e03937",
+      "bytes": 38653
+    },
+    {
+      "path": "resources/icons/VuttaraStudio.ico",
+      "sha256": "5a999c50384654977f23b26a9c29cdd9a9d51ef11ac1ea149f45921f42a82947",
+      "bytes": 96477
+    }
+  ]
+}

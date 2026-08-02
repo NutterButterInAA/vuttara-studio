@@ -1,0 +1,21 @@
+VUTTARA STUDIO LICENSE NOTICE
+Version 0.0.1
+Copyright (C) 2026 Ward Reynolds
+
+Vuttara Studio source code is free software: you may redistribute it and/or
+modify it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 2 of the License, or (at your
+option) any later version (GPL-2.0-or-later).
+
+The official Windows binary distribution combines Vuttara Studio with
+components whose applicable terms require GPLv3-compatible distribution,
+including dynamically linked Qt libraries available under LGPLv3/GPLv3.
+Accordingly, the combined Windows binary may be used, copied, modified, and
+redistributed under GNU GPL version 3, as permitted by the "or later" option.
+
+There is NO WARRANTY, to the extent permitted by law. See the complete license
+texts in the legal\licenses directory.
+
+Nothing in the Terms of Service limits rights granted by an applicable
+open-source license. If the Terms conflict with an open-source license for a
+covered component, the open-source license controls for that component.

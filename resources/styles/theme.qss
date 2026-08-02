@@ -1,0 +1,616 @@
+﻿QWidget {
+    background: #14131a;
+    color: #f4f1ff;
+    font-family: "Segoe UI";
+    font-size: 10pt;
+}
+QMainWindow::separator {
+    background: #282431;
+    width: 1px;
+    height: 1px;
+}
+QMenuBar, QMenu, QStatusBar, QToolBar {
+    background: #1b1922;
+}
+QMenuBar::item:selected, QMenu::item:selected {
+    background: #4e2a6b;
+}
+QDockWidget {
+    titlebar-close-icon: none;
+    titlebar-normal-icon: none;
+}
+QDockWidget::title {
+    background: #211e29;
+    padding: 8px;
+    font-weight: 600;
+}
+QListWidget, QTreeWidget, QFrame#panel, QGroupBox {
+    background: #1b1922;
+    border: 1px solid #302b3b;
+    border-radius: 6px;
+}
+QFrame#previewFrame {
+    background: #0c0b10;
+    border: 1px solid #44334f;
+    border-radius: 6px;
+}
+QWidget#obsPreview {
+    background: #0c0b10;
+}
+QLabel#engineBadge {
+    padding: 6px 10px;
+    background: #2c1d36;
+    border: 1px solid #74468d;
+    border-radius: 5px;
+    color: #d9b8ee;
+    font-size: 9pt;
+    font-weight: 600;
+}
+QLabel#previewInformation {
+    color: #aaa1b5;
+    font-size: 9pt;
+}
+QLabel#audioChannelTitle {
+    color: #f4f1ff;
+    background: transparent;
+    border: none;
+    font-weight: 600;
+    min-height: 20px;
+}
+QPushButton {
+    background: #33223f;
+    border: 1px solid #593470;
+    border-radius: 5px;
+    padding: 6px 12px;
+}
+QPushButton:hover {
+    background: #482d59;
+}
+QPushButton:disabled {
+    background: #24212b;
+    color: #81798d;
+    border-color: #302b3b;
+}
+QSlider::groove:horizontal {
+    height: 5px;
+    background: #302b3b;
+    border-radius: 2px;
+}
+QSlider::handle:horizontal {
+    width: 13px;
+    margin: -4px 0;
+    background: #a96bd1;
+    border-radius: 6px;
+}
+
+QComboBox, QLineEdit {
+    background: #211e29;
+    border: 1px solid #443a52;
+    border-radius: 5px;
+    padding: 7px 9px;
+    selection-background-color: #5d3475;
+}
+QComboBox:hover, QLineEdit:focus {
+    border-color: #8556a1;
+}
+QComboBox::drop-down {
+    border: none;
+    width: 24px;
+}
+QCheckBox {
+    spacing: 8px;
+    background: transparent;
+}
+QCheckBox::indicator {
+    width: 17px;
+    height: 17px;
+}
+QListWidget::item {
+    padding: 6px;
+    border-radius: 4px;
+}
+QListWidget::item:selected {
+    background: #4e2a6b;
+}
+
+
+QProgressBar {
+    border: 1px solid #4a4658;
+    border-radius: 4px;
+    background: #17151e;
+    min-height: 14px;
+}
+
+QProgressBar::chunk {
+    border-radius: 3px;
+    background: qlineargradient(
+        x1: 0, y1: 0, x2: 1, y2: 0,
+        stop: 0 #35c759,
+        stop: 0.72 #d7b63f,
+        stop: 1 #e65757);
+}
+
+/* Compact right-side Audio Mixer dock */
+QDockWidget#audioMixerDock::title {
+    padding: 5px 8px;
+    font-size: 9pt;
+}
+QWidget#audioMixerPanel {
+    background: #1b1922;
+}
+QLabel#audioMixerHint {
+    color: #968da1;
+    background: transparent;
+    border: none;
+    font-size: 8pt;
+}
+QGroupBox#audioChannelGroup {
+    margin-top: 8px;
+    border-radius: 4px;
+}
+QGroupBox#audioChannelGroup::title {
+    subcontrol-origin: margin;
+    left: 7px;
+    padding: 0 3px;
+    font-size: 9pt;
+}
+QComboBox#audioDeviceCombo {
+    min-height: 20px;
+    padding: 3px 6px;
+    font-size: 9pt;
+}
+QLabel#audioChannelState,
+QLabel#audioLevelLabel,
+QLabel#audioVolumeValue {
+    color: #aaa1b5;
+    background: transparent;
+    border: none;
+    font-size: 8pt;
+}
+QProgressBar#audioMeter {
+    min-height: 9px;
+    max-height: 9px;
+    border-radius: 3px;
+}
+QProgressBar#audioMeter::chunk {
+    border-radius: 2px;
+}
+QPushButton#audioRefreshButton,
+QPushButton#audioMuteButton {
+    min-height: 20px;
+    padding: 3px 7px;
+    font-size: 8pt;
+}
+QSlider#audioVolumeSlider {
+    min-height: 18px;
+}
+
+
+/* Stable native dock tabs: a tabbed dock is stacked, not missing. */
+QMainWindow > QTabBar {
+    background: #1c1922;
+    border: 1px solid #3c3546;
+    border-radius: 4px;
+    min-height: 26px;
+}
+QMainWindow > QTabBar::tab {
+    min-width: 90px;
+    min-height: 22px;
+    padding: 3px 10px;
+    margin: 2px 1px 1px 1px;
+    color: #bdb4c7;
+    background: #282331;
+    border: 1px solid #433a4f;
+    border-radius: 4px;
+    font-size: 9pt;
+    font-weight: 600;
+}
+QMainWindow > QTabBar::tab:selected {
+    color: #ffffff;
+    background: #574267;
+    border-color: #8b70a0;
+}
+QMainWindow > QTabBar::tab:hover:!selected {
+    color: #f0e8f7;
+    background: #373040;
+}
+
+/* Compact source-group tabs below the Sources list */
+QTabBar#sourceGroupTabs {
+    background: transparent;
+    border: none;
+}
+QTabBar#sourceGroupTabs::tab {
+    min-width: 46px;
+    max-width: 110px;
+    min-height: 20px;
+    padding: 2px 8px;
+    margin-right: 2px;
+    color: #aaa1b5;
+    background: #24202c;
+    border: 1px solid #3a3344;
+    border-radius: 4px;
+    font-size: 8pt;
+}
+QTabBar#sourceGroupTabs::tab:selected {
+    color: #f3edf8;
+    background: #4c3b5c;
+    border-color: #76608a;
+}
+QTabBar#sourceGroupTabs::tab:hover:!selected {
+    background: #30293a;
+}
+QPushButton#groupSourcesButton,
+QPushButton#ungroupSourcesButton,
+QPushButton#removeSourceGroupButton {
+    min-height: 20px;
+    padding: 3px 7px;
+    font-size: 8pt;
+}
+
+/* Recording Foundation Stage 6A controls */
+QWidget#recordingControlsPanel {
+    background: #1b1922;
+}
+QLabel#recordingHeading {
+    color: #f3edf8;
+    font-size: 10pt;
+    font-weight: 700;
+}
+QLabel#recordingStatusLabel {
+    color: #d7bddf;
+    background: #27212f;
+    border: 1px solid #45384f;
+    border-radius: 4px;
+    padding: 5px 7px;
+    font-size: 9pt;
+    font-weight: 600;
+}
+QLabel#recordingFolderLabel {
+    color: #aaa1b5;
+    font-size: 8pt;
+}
+QLineEdit#recordingFolderEdit {
+    min-height: 20px;
+    padding: 3px 6px;
+    font-size: 8pt;
+}
+QPushButton#chooseRecordingFolderButton,
+QPushButton#openRecordingFolderButton,
+QPushButton#startRecordingButton,
+QPushButton#stopRecordingButton {
+    min-height: 22px;
+    padding: 4px 7px;
+    font-size: 8pt;
+}
+QPushButton#startRecordingButton {
+    font-weight: 700;
+}
+
+
+
+QPushButton#recordingSettingsButton {
+    min-width: 78px;
+}
+
+QLabel#recordingEstimateLabel {
+    color: #b9adc5;
+    font-size: 8.5pt;
+}
+
+QLabel#recordingSettingsDiagnostics {
+    color: #aaa0b5;
+    background: #201c26;
+    border: 1px solid #3b3444;
+    border-radius: 5px;
+    padding: 8px;
+}
+
+/* Settings and Source Properties Stage 7A */
+QDialog#settingsDialog,
+QDialog#sourcePropertiesDialog,
+QDialog#sourceTransformDialog {
+    background: #17151d;
+}
+QListWidget#settingsCategories {
+    background: #1d1a23;
+    border: 1px solid #3b3444;
+    border-radius: 6px;
+    padding: 4px;
+}
+QListWidget#settingsCategories::item {
+    min-height: 30px;
+    padding: 5px 9px;
+}
+QListWidget#settingsCategories::item:selected {
+    background: #55366b;
+    color: #ffffff;
+}
+QStackedWidget#settingsPages {
+    background: #1b1821;
+    border: 1px solid #3b3444;
+    border-radius: 6px;
+}
+QLabel#settingsPageTitle,
+QLabel#sourcePropertiesHeading {
+    color: #f4edf8;
+}
+QLabel#settingsPageDescription,
+QLabel#sourcePropertiesDescription {
+    color: #aea4b8;
+    background: #211d28;
+    border: 1px solid #3b3444;
+    border-radius: 5px;
+    padding: 8px;
+}
+QWidget#recordingControlsPanel {
+    border: 1px solid #332d3b;
+    border-radius: 6px;
+}
+
+/* Modern Menus and Window Chrome Stage 7B */
+QWidget {
+    background: #111018;
+    color: #f5f2fa;
+    font-family: "Segoe UI Variable", "Segoe UI";
+}
+QMainWindow#mainWindow {
+    background: #0e0d13;
+}
+QMenuBar#mainMenuBar {
+    background: #17151d;
+    border: none;
+    border-bottom: 1px solid #2b2733;
+    padding: 2px 8px;
+    min-height: 32px;
+    spacing: 3px;
+}
+QMenuBar#mainMenuBar::item {
+    background: transparent;
+    color: #e8e2ee;
+    padding: 7px 11px;
+    margin: 2px 1px;
+    border-radius: 6px;
+}
+QMenuBar#mainMenuBar::item:selected {
+    background: #2b2533;
+    color: #ffffff;
+}
+QMenuBar#mainMenuBar::item:pressed {
+    background: #4a3158;
+}
+QMenu {
+    background: #1b1822;
+    color: #f2edf6;
+    border: 1px solid #3a3344;
+    border-radius: 9px;
+    padding: 6px;
+}
+QMenu::item {
+    background: transparent;
+    padding: 8px 34px 8px 12px;
+    border-radius: 6px;
+}
+QMenu::item:selected {
+    background: #4b315b;
+    color: #ffffff;
+}
+QMenu::item:disabled {
+    color: #746d7e;
+}
+QMenu::separator {
+    height: 1px;
+    background: #342e3d;
+    margin: 5px 8px;
+}
+QMenu::indicator {
+    width: 16px;
+    height: 16px;
+    left: 10px;
+}
+QStatusBar#mainStatusBar {
+    background: #17151d;
+    color: #aaa1b5;
+    border-top: 1px solid #2b2733;
+    padding: 2px 8px;
+}
+QToolTip {
+    background: #24202c;
+    color: #f5f2fa;
+    border: 1px solid #554661;
+    border-radius: 6px;
+    padding: 6px 8px;
+}
+QFrame#panel {
+    background: #15131b;
+    border: 1px solid #2d2835;
+    border-radius: 10px;
+}
+QFrame#previewFrame {
+    border: 1px solid #493a55;
+    border-radius: 9px;
+}
+QLabel#engineBadge {
+    padding: 4px 9px;
+    background: #281f30;
+    border: 1px solid #644775;
+    border-radius: 10px;
+    color: #d8bfe6;
+    font-size: 8pt;
+    font-weight: 700;
+}
+QDockWidget::title {
+    background: #1a1720;
+    color: #eee8f3;
+    border-bottom: 1px solid #322c3a;
+    padding: 8px 10px;
+    font-weight: 650;
+}
+QListWidget, QTreeWidget {
+    background: #18161e;
+    border: 1px solid #302b38;
+    border-radius: 8px;
+    outline: none;
+}
+QListWidget::item {
+    padding: 7px 8px;
+    margin: 1px 2px;
+    border-radius: 6px;
+}
+QListWidget::item:selected {
+    background: #533464;
+    color: #ffffff;
+}
+QGroupBox {
+    background: #18161e;
+    border: 1px solid #332d3b;
+    border-radius: 9px;
+    margin-top: 14px;
+    padding-top: 8px;
+}
+QGroupBox::title {
+    subcontrol-origin: margin;
+    left: 10px;
+    padding: 0 5px;
+    color: #d8d0df;
+    font-weight: 650;
+}
+QPushButton {
+    background: #2d2437;
+    border: 1px solid #553c65;
+    border-radius: 7px;
+    padding: 7px 13px;
+}
+QPushButton:hover {
+    background: #3a2b47;
+    border-color: #74548a;
+}
+QPushButton:pressed {
+    background: #241d2c;
+}
+QPushButton:focus {
+    border-color: #9a6db5;
+}
+QPushButton#startRecordingButton {
+    background: #8b3046;
+    border-color: #b64b64;
+    color: #ffffff;
+}
+QPushButton#startRecordingButton:hover {
+    background: #a13952;
+}
+QPushButton#stopRecordingButton {
+    background: #302833;
+    border-color: #5f4c64;
+}
+QComboBox, QLineEdit, QSpinBox, QDoubleSpinBox, QKeySequenceEdit {
+    background: #1b1821;
+    border: 1px solid #403747;
+    border-radius: 7px;
+    padding: 7px 9px;
+    selection-background-color: #69427b;
+}
+QComboBox:hover, QLineEdit:hover, QSpinBox:hover, QDoubleSpinBox:hover,
+QComboBox:focus, QLineEdit:focus, QSpinBox:focus, QDoubleSpinBox:focus,
+QKeySequenceEdit:focus {
+    border-color: #825c96;
+}
+QScrollBar:vertical {
+    background: transparent;
+    width: 11px;
+    margin: 2px;
+}
+QScrollBar::handle:vertical {
+    background: #4c4355;
+    min-height: 30px;
+    border-radius: 5px;
+}
+QScrollBar::handle:vertical:hover {
+    background: #665771;
+}
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical,
+QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
+    background: transparent;
+    height: 0;
+}
+QDialog#settingsDialog,
+QDialog#sourcePropertiesDialog,
+QDialog#sourceTransformDialog {
+    background: #121017;
+}
+QListWidget#settingsCategories {
+    background: #17151c;
+    border-radius: 9px;
+    padding: 6px;
+}
+QListWidget#settingsCategories::item {
+    min-height: 32px;
+    padding: 6px 10px;
+}
+QListWidget#settingsCategories::item:selected {
+    background: #573568;
+}
+QStackedWidget#settingsPages {
+    background: #17151c;
+    border: 1px solid #332d3b;
+    border-radius: 9px;
+}
+QLabel#settingsPageDescription,
+QLabel#sourcePropertiesDescription,
+QLabel#settingsInlineDescription {
+    color: #aaa1b5;
+    background: #1d1922;
+    border: 1px solid #342d3c;
+    border-radius: 7px;
+    padding: 9px;
+}
+QWidget#recordingControlsPanel {
+    background: #17151d;
+    border: 1px solid #302a38;
+    border-radius: 9px;
+}
+
+
+
+/* Bundled FFmpeg and Compact Sources Stage 7C */
+QToolButton#addSourceButton,
+QToolButton#removeSourceButton,
+QToolButton#sourceActionsButton {
+    background: #211e29;
+    border: 1px solid #3d3548;
+    border-radius: 5px;
+    color: #f5f2fa;
+    min-width: 30px;
+    max-width: 30px;
+    min-height: 28px;
+    max-height: 28px;
+    padding: 0;
+    font-size: 15px;
+    font-weight: 600;
+}
+QToolButton#addSourceButton:hover,
+QToolButton#removeSourceButton:hover,
+QToolButton#sourceActionsButton:hover,
+QToolButton#addSourceButton:checked,
+QToolButton#sourceActionsButton:checked {
+    background: #342641;
+    border-color: #76528c;
+}
+QToolButton#removeSourceButton:disabled {
+    background: #18161d;
+    color: #625c6c;
+    border-color: #28232f;
+}
+QToolButton#addSourceButton::menu-indicator {
+    image: none;
+    width: 0;
+}
+QMenu#addSourceMenu {
+    min-width: 210px;
+}
+QDockWidget#sourcesDock QListWidget {
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+/* Interactive Preview Transforms Stage 8A uses a QPainter overlay above the native libobs preview. */

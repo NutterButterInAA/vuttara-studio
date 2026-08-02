@@ -1,0 +1,6 @@
+Intended application repository:
+https://github.com/NutterButterInAA/vuttara-studio
+
+The local Git repository created by the bootstrap installer intentionally has
+no remote configured. This prevents accidental interaction with the existing
+remote repository until Ward explicitly approves the migration plan.

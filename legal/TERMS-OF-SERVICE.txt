@@ -1,0 +1,129 @@
+VUTTARA STUDIO TERMS OF SERVICE
+Effective date: August 1, 2026
+
+These Terms of Service ("Terms") govern installation and use of the official
+Vuttara Studio application and related update and website services provided by
+Ward Reynolds in Calgary, Alberta, Canada ("Vuttara Studio," "we," "us," or
+"our").
+
+PLEASE READ THESE TERMS CAREFULLY. BY ACCEPTING THEM IN THE INSTALLER OR USING
+THE OFFICIAL APPLICATION OR SERVICES, YOU AGREE TO THESE TERMS. IF YOU DO NOT
+AGREE, DO NOT COMPLETE THE OFFICIAL INSTALLER.
+
+1. OPEN-SOURCE RIGHTS
+Vuttara Studio is open-source software. Its source code is licensed under GNU
+GPL version 2 or any later version. The official Windows binary distribution
+is provided on GPLv3-compatible terms. These Terms do not take away, narrow, or
+add restrictions to rights granted by an applicable open-source license. If
+these Terms conflict with an open-source license, the open-source license
+controls for the covered software.
+
+2. ELIGIBILITY
+Vuttara Studio is recommended for people aged 13 or older. A person below the
+age of majority where they live should use the application with the involvement
+and permission of a parent or legal guardian. You must be legally able to enter
+these Terms.
+
+3. THE APPLICATION
+Vuttara Studio is Windows streaming and recording software. It can capture
+screens, windows, audio, microphones, cameras, and other sources; create local
+recordings; and transmit content to streaming services selected and configured
+by the user. Features, supported services, and compatibility may change.
+
+4. YOUR CONTENT AND PERMISSIONS
+You retain rights you hold in content you create. You are solely responsible
+for what you capture, record, display, transmit, or publish. You must obtain all
+permissions, releases, licences, and consents required for people, music,
+video, games, trademarks, private communications, copyrighted works, and other
+material. Do not use Vuttara Studio to violate privacy, intellectual-property,
+platform, contractual, or other legal rights.
+
+5. THIRD-PARTY SERVICES
+Streaming platforms, GitHub, website infrastructure providers, hardware
+drivers, codecs, and other third-party products or services are governed by
+their own terms and policies. Vuttara Studio does not control them and is not
+responsible for their availability, conduct, account decisions, content rules,
+or data practices. You are responsible for reviewing and following the terms
+of every service you use.
+
+6. ACCOUNTS, KEYS, AND SECURITY
+Vuttara Studio 0.0.1 does not provide a Vuttara account or cloud-sync service.
+Streaming credentials entered in the application are stored locally and are
+protected using Windows Data Protection API (DPAPI) for the current Windows
+user. You remain responsible for securing your computer, Windows account,
+streaming accounts, keys, passwords, recordings, projects, and backups.
+
+7. UPDATES
+The stable application may check the dedicated Vuttara Studio update feed after
+startup and periodically. It may notify you that an update exists. An installer
+is downloaded only after your approval, is accepted only from the official
+GitHub release path over HTTPS, and must match the published file size and
+SHA-256 value. Installation requires separate approval and is blocked while
+streaming or recording. The normal interactive installer requires Terms
+acceptance and Privacy Policy acknowledgement. We do not guarantee that an
+update will always be available or compatible with every system.
+
+8. ACCEPTABLE USE
+You must not use the official services to distribute malware, evade platform
+security, impersonate others, interfere with networks, gain unauthorized
+access, or engage in unlawful conduct. This section governs official services;
+it does not restrict rights granted by open-source licences to inspect, modify,
+or redistribute covered source code.
+
+9. AVAILABILITY AND CHANGES
+The application and related services may contain defects, may be unavailable,
+and may change or be discontinued. Preserve independent backups before relying
+on the application for important work. Preview and early releases may be less
+stable than mature production software.
+
+10. NO PROFESSIONAL ADVICE
+Vuttara Studio does not provide legal, copyright, privacy, broadcasting,
+security, tax, or other professional advice. You are responsible for obtaining
+advice appropriate to your situation.
+
+11. DISCLAIMER OF WARRANTIES
+TO THE MAXIMUM EXTENT PERMITTED BY LAW, THE APPLICATION AND SERVICES ARE
+PROVIDED "AS IS" AND "AS AVAILABLE," WITHOUT WARRANTIES OR CONDITIONS OF ANY
+KIND, WHETHER EXPRESS, IMPLIED, STATUTORY, OR OTHERWISE, INCLUDING
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE, NON-INFRINGEMENT,
+ACCURACY, AVAILABILITY, OR ERROR-FREE OPERATION. OPEN-SOURCE COMPONENTS ARE ALSO
+SUBJECT TO THE WARRANTY DISCLAIMERS IN THEIR LICENCES. NOTHING IN THESE TERMS
+EXCLUDES A WARRANTY OR RIGHT THAT CANNOT LAWFULLY BE EXCLUDED.
+
+12. LIMITATION OF LIABILITY
+TO THE MAXIMUM EXTENT PERMITTED BY LAW, WARD REYNOLDS AND VUTTARA STUDIO WILL
+NOT BE LIABLE FOR INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, EXEMPLARY, OR
+PUNITIVE DAMAGES, OR FOR LOST DATA, LOST RECORDINGS, LOST REVENUE, LOST PROFITS,
+ACCOUNT ACTIONS, STREAM INTERRUPTION, OR BUSINESS INTERRUPTION ARISING FROM OR
+RELATED TO THE APPLICATION OR SERVICES. THIS LIMITATION DOES NOT APPLY WHERE
+LIABILITY CANNOT LAWFULLY BE LIMITED.
+
+13. INDEMNITY
+To the extent permitted by law, you agree to be responsible for claims, losses,
+and reasonable costs arising from your content, your violation of law or
+third-party rights, or your misuse of official services. This section does not
+limit open-source licence rights.
+
+14. TERMINATION OF SERVICES
+You may stop using the application or services at any time. Access to official
+hosted services may be limited for abuse, security threats, or legal reasons.
+Termination of hosted service access does not terminate open-source rights
+already granted under an applicable licence.
+
+15. GOVERNING LAW
+These Terms are governed by the laws of Alberta and the federal laws of Canada
+applicable there, without regard to conflict-of-law principles. Courts located
+in Alberta will have jurisdiction, except where consumer law requires another
+forum or law.
+
+16. CHANGES TO THESE TERMS
+We may update these Terms for future versions or services. The effective date
+will be changed when updates are published. Material changes will not
+retroactively remove rights already granted under open-source licences.
+
+17. CONTACT
+Operator: Ward Reynolds
+Location: Calgary, Alberta, Canada
+Website: https://vuttarastudio.nuttabuttainaa.com/
+Privacy contact: privacy@nuttabuttainaa.com
+Source and project requests: https://github.com/NutterButterInAA/vuttara-studio/issues

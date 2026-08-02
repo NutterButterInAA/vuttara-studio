@@ -1,0 +1,27 @@
+VUTTARA STUDIO 0.0.1 — MANUAL INSTALLER VALIDATION CHECKLIST
+
+Do not publish until every required item passes.
+
+1. Launch Vuttara-Studio-0.0.1-Setup.exe normally.
+2. Confirm every installer page identifies the product as "Vuttara Studio" and
+   the default folder ends in \Programs\Vuttara Studio with no "Rewrite" label.
+3. Confirm the Terms page appears and Next cannot continue until "I accept"
+   is selected.
+4. Confirm the Privacy Policy page appears and Next cannot continue until the
+   acknowledgement checkbox is selected.
+5. Complete installation.
+6. Confirm Vuttara Studio launches and reports version 0.0.1 / STABLE 0.0.1.
+7. Confirm the About dialog and release badge do not call the product a rewrite.
+8. Confirm scenes, sources, capture, audio controls, preview editing, recording,
+   and streaming settings remain present.
+9. Make a short local recording and verify it plays.
+10. Confirm Help > Check for Updates performs the dedicated stable feed check.
+    Before website publication, a controlled feed-unavailable message is
+    acceptable.
+11. Confirm the installed legal directory contains Terms, Privacy Policy,
+    licence files, source offer, notices, and release notes.
+12. Confirm the legacy 0.2.9 GitHub release was not deleted or replaced.
+13. Uninstall Vuttara Studio and confirm user projects/recordings are not
+    automatically deleted.
+
+Record PASS/FAIL and any observations before typing PUBLISH.

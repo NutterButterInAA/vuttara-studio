@@ -1,0 +1,8 @@
+Vuttara Studio 0.0.1 is a local development baseline.
+
+Do not commit, push, tag, publish, release, deploy, distribute installers,
+or modify the Vuttara Studio website without Ward's explicit approval.
+
+The legacy Vuttara Studio application and website are separate and must remain
+untouched. Only explicitly reviewed branding assets were imported into this
+clean project.
